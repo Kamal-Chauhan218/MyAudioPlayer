@@ -1,0 +1,76 @@
+.audio-wrapper {
+  height: 100vh;
+  width: 100vw; /* ← Add this line if missing */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3rem;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  width: 90vw; /* ✅ 70% width of the viewport */
+  height: 90vh; /* ✅ 70% height of the viewport */
+  max-width: 900px;
+  max-height: 90vh;
+  box-shadow: 0 6px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.song-info h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.song-info p {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.cover-image {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 16px;
+  margin: 1.5rem auto;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.25);
+}
+
+.audio-player {
+  width: 100%;
+  max-width: 100%;
+  /* height: auto; */
+  /* margin-top: 2rem; */
+  border-radius: 12px;
+  outline: none;
+  padding: 0;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .overlay {
+    width: 90vw;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .song-info h1 {
+    font-size: 2rem;
+  }
+
+  .song-info p {
+    font-size: 1.1rem;
+  }
+
+  .cover-image {
+    max-width: 90%;
+  }
+}
